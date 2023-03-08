@@ -1,10 +1,25 @@
 import "./navbar.scss"
 
 import {Link} from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
 const Navbar = () => {
+
+    const [active, setActive] = useState(false)
+
+const scroll = ()=>{
+            window.scrollY>0 ? setActive(true):setActive(false)
+}
+
+    useEffect(()=>{
+        window.addEventListener("scroll",scroll );
+        return ()=>{
+            window.removeEventListener("scroll", scroll)
+        };
+    },[])
   return (
     <div className="navbar">
-        <div className="navbarContainer">
+          <div className={active ? "navbarContainer active" :"navbarContainer"}>
             <Link to="/" className="logo">
                 <img src="/logo.png" alt="" className="logoImg" />
             </Link>
@@ -13,15 +28,11 @@ const Navbar = () => {
             <Link to="/?cart=art" >
                 <h6>ART</h6>
             </Link>
-                  <Link to="/?cart=technology" >
-                      <h6>TECHNOLOGY</h6>
-                  </Link>
+                  
                   <Link to="/?cart=Scince" >
                       <h6>SCINCE</h6>
                   </Link>
-                  <Link to="/?cart=cinema" >
-                      <h6>CINEMA</h6>
-                  </Link>
+                  
                   <Link to="/?cart=design" >
                       <h6>DESIGN</h6>
                   </Link>
