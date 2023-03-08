@@ -1,20 +1,29 @@
+
+@import "../../global.scss";
+
 .menu{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include mobile{
+        margin-left: 40px;
+      
+    }
+
+
     h1{
         font-size: 20px;
         color:#555;
         text-transform: capitalize;
-
+   
 
     }
     .post{
         display: flex;
         position: relative;
         flex-direction: column;
-        
+     
         
         img{
             width: 100%;
@@ -23,11 +32,15 @@
             border-top-right-radius:10px;
             border: 2px solid lightseagreen;
 
-           
+            @include mobile {
+                width: 300px;
+                
+            }
 
         }
         h2{
             color: #555;
+            width: 300px;
 
         }
 

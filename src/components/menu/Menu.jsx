@@ -38,7 +38,9 @@ const Menu = () => {
             <div className="post" key={post.id}>
                 <img src={post.img} alt="Loading" className="postImg" />
                 <h2>{post.title}</h2>
-                <button>Read More </button>
+                <button>
+                  
+                  Read More </button>
             </div>
         ))}
     </div>

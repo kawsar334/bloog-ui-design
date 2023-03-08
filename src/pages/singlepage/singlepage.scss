@@ -1,18 +1,29 @@
 
+
+@import "../../global.scss";
 .singlepage{
     width: 1024px;
     margin: 20px auto ;
     
+  
     .singlepageWrapper{
         display: flex;
         gap: 50px;
+        @include mobile {
+              
+                flex-direction: column;
+            }
+
         .content{
             flex: 5;
-            // background-color: red;
+            height: max-content;
+            padding: 10px 20px;
+          
             img{
                 width: 100%;
                 height: 300px;
                 object-fit: cover;
+               
                 
 
             }

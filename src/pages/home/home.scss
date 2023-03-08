@@ -70,6 +70,9 @@
                 }
                 .content{
                     flex: 3;
+                    h1{
+                        color: teal;
+                    }
                     button{
                         width: max-content;
                         padding: 10px 20px;
